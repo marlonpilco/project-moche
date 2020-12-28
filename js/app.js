@@ -1,4 +1,4 @@
-const insertBtn = document.getElementById('insertBtn')
+const insertBtn = document.querySelectorAll('.insertBtn')
 
 function createCard(){
     const insertName = document.getElementById('insertName').value
@@ -40,6 +40,4 @@ function createCard(){
 }
 
 // Insertamos la card cuando hagamos click en el boton insertar
-insertBtn.addEventListener('click', ()=>{
-    createCard()
-})
+insertBtn.forEach(n => n.addEventListener('click', createCard))
